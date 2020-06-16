@@ -2,12 +2,15 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    jest: true
   },
   extends: [
     'airbnb-base',
-    'prettier',
     'plugin:@typescript-eslint/recommended',
+
+    'prettier',
     'prettier/@typescript-eslint',
+    // "plugin:prettier/recommended",
   ],
   plugins: [
     'prettier'
@@ -35,6 +38,7 @@ module.exports = {
       "ignorePackages",
       {
         "ts": "never",
+        "js": "never",
       }
     ],
 
