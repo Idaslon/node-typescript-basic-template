@@ -1,10 +1,26 @@
-import express from 'express';
+import './bootstrap';
+
+import express, { Express } from 'express';
 
 import routes from './routes';
 
-const server = express();
+class App {
+  server: Express;
 
-server.use(express.json());
-server.use(routes);
+  constructor() {
+    this.server = express();
 
-export default server;
+    this.middlewares();
+    this.routes();
+  }
+
+  middlewares() {
+    this.server.use(express.json());
+  }
+
+  routes() {
+    this.server.use(routes);
+  }
+}
+
+export default new App().server;
