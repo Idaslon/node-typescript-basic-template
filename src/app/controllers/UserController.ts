@@ -1,9 +1,11 @@
 import { Request, Response } from 'express';
 
-const users = [{ name: 'Lonlon' }, { name: 'Lonzin' }, { name: 'Test' }];
+const users = [{ name: 'Destroyeer' }, { name: 'Test' }];
 
-export default {
+class UserController {
   async index(req: Request, res: Response) {
     return res.json(users);
-  },
-};
+  }
+}
+
+export default new UserController();
