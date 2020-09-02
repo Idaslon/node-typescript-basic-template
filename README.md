@@ -29,7 +29,7 @@ sudo docker run --name mongoDatabase -p 27017:27017 -d -t mongo
 - **Code Formatter**
   - Eslint
   - Prettier
-  - Root Import `~`
+  - Module import `@`
   - Import Helpers
 
 - **Tests with Jest**
